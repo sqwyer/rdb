@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'MessinaSans';
+    src: url('/static/MessinaSans-Regular.otf') format("opentype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MessinaSans', Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #eee;
+}
+
+nav img {
+    height: 70px;
+}
+
+nav > div:first-child {
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    cursor: pointer;
+    margin: 1em;
+    margin-left: 2em;
+    font-family: Helvetica;
+}
+
+nav > div:first-child:hover {
+    color: #0d5e91;
+}
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #021f30;
+    cursor: 0.1s color;
+    display: block;
+    padding: 0.5em;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+nav a:hover {
+    color: #0d5e91;
+    border-bottom: 2px solid #0d5e91;
+}
+
+nav > div:last-child {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    height: 100%;
+    margin: auto 2em auto auto;
+}
+
+.content {
+    padding: 2em;
+}
+
+.content a {
+    color: #0d5e91;
+}
+
+.content a:hover {
+    color: #083d5e;
+}
+
+.short {
+    max-width: 70vw;
+    margin: 2em auto;
+}
+
+.content h1 {
+    font-size: 300%;
+}
+
+.content h4, .content p {
+    font-size: 120%;
+}
+
+.content h4 {
+    color: #505050;
+}
+
+.content p {
+    color: #000;
+}
+
+.content hr {
+    border: none;
+    border-radius: 0;
+    padding: .5px;
+    background: #eee;
+}
