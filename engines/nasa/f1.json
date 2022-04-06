@@ -5,7 +5,7 @@
   "developed": "1950",
   "flown": [],
   "fuel": "LOX/RP1",
-  "system": "",
+  "cycle": "Closed Gas-generator",
   "dry_weight": {
     "imp": 18500,
     "metric": 8400
