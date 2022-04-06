@@ -1,0 +1,26 @@
+{
+  "name": "F1",
+  "agency": "NASA",
+  "manufac": "Rocketdyne",
+  "developed": "1950",
+  "flown": [],
+  "fuel": "LOX/RP1",
+  "system": "",
+  "dry_weight": {
+    "imp": 18500,
+    "metric": 8400
+  },
+  "chamber_pres": {
+    "bar": 70,
+    "psi": 1050,
+    "MPa": 7
+  },
+  "diameter": {
+    "imp": 12.2,
+    "metric": 3.7
+  },
+  "mix": {
+    "general": 2.27,
+    "percent": "69:31"
+  }
+}
