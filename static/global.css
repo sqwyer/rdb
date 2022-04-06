@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'MessinaSans';
-    src: url('/static/MessinaSans-Regular.otf') format("opentype");
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -90,6 +85,7 @@ nav > div:last-child {
 
 .content h4 {
     color: #505050;
+    font-weight: normal;
 }
 
 .content p {
