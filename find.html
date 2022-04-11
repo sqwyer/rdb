@@ -10,26 +10,28 @@ permalink: /404.html
     <style>
         @font-face {
             font-family: 'MessinaSans';
-            src: url('./static/MessinaSans-Regular.otf') format("opentype");
+            src: url('/rdb/static/MessinaSans-Regular.otf') format("opentype");
         }
     </style>
-    <link rel="stylesheet" href="./static/global.css">
+    <link rel="stylesheet" href="/rdb/static/global.css">
     <title>RDB: Rocket Database</title>
+
+    <script src="/rdb/static/search.js"></script>
 </head>
 <body>
     <nav>
         <div>
-            <img src="./static/icon.svg">
+            <img src="/rdb/static/icon.svg">
             <p>Rocket<br />Database</p>
         </div>
         <div>
-            <a href="./engines.html">Engines</a>
-            <a href="./spaceflights.html">Spaceflights</a>
-            <a href="./programs.html">Programs</a>
+            <a href="/rdb/engines.html">Engines</a>
+            <a href="/rdb/spaceflights.html">Spaceflights</a>
+            <a href="/rdb/programs.html">Programs</a>
             <a href="https://github.com/sqwyer/rdb">Contribute</a>
         </div>
     </nav>
-    <div class="content">
+    <div class="content" id="root">
         <div class="short">
           <h1>404: Page not found...</h1>
         </div>
