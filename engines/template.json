@@ -1,0 +1,40 @@
+{
+    "spec": {
+      "name": "engine name",
+      "agency": ["x"],
+      "manufac": ["x", "x"],
+      "developed": {
+        "start": 0
+      },
+      "flown": [],
+      "fuel": {
+        "o": "oxidizer",
+        "f": "fuel"
+      },
+      "cycle": "x",
+      "dry_weight": {
+        "imp": 0,
+        "metric": 0
+      },
+      "chamber_pres": {
+        "bar": 0,
+        "psi": 0,
+        "MPa": 0
+      },
+      "diameter": {
+        "imp": 0,
+        "metric": 0
+      },
+      "mix": {
+        "general": 0,
+        "percent": {
+          "o": "x",
+          "f": "x"
+        }
+      }
+    },
+    "info": {
+      "desc": "xxxxx"
+    }
+  }
+  
