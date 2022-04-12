@@ -1,3 +1,19 @@
-.colored {
-    color: red;
+.show-met, .show-imp {
+    display: none;
+}
+
+.imp .show-imp {
+    display: initial;
+}
+
+.met .show-met {
+    display: initial;
+}
+
+.met td.show-met {
+    display: table-cell;
+}
+
+.imp td.show-imp {
+    display: table-cell;
 }

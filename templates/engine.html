@@ -1,8 +1,41 @@
 <!--
 #IMPORTS SCRIPT /rdb/static/engine.js
+#IMPORTS STYLE /rdb/static/table.css
 #IMPORTS STYLE /rdb/static/engine.css
 -->
 
-<div class="colored" onclick="test()">
-    Name: {{name}}
+<div class="short">
+    <h1>{{spec.name}} Engine</h1>
+    <h4>{{info.desc}}</h4>
+    <br />
+    <hr />
+    <br />
+    <button onclick="switchMes(document.getElementById('spec_1'), this)">Switch to metric measurments</button>
+    <br />
+    <br />
+    <table class="met" id="spec_1">
+        <tr>
+            <td>Cycle</td>
+            <td>{{spec.cycle}}</td>
+        </tr>
+        <tr>
+            <td>Propellant</td>
+            <td>{{spec.fuel.o}} / {{spec.fuel.f}}</td>
+        </tr>
+        <tr>
+            <td>Mixture Ratio</td>
+            <td>{{spec.mix.general}} ({{spec.mix.percent.o}}% {{spec.fuel.o}}, {{spec.mix.percent.f}}% {{spec.fuel.f}})</td>
+        </tr>
+        <tr>
+            <td>Diameter</td>
+            <!-- <div class="show-met">{{spec.diameter.metric}}m</div>
+            <div class="show-imp">{{spec.diameter.imp}}ft</div> -->
+            <td class="show-met">{{spec.diameter.metric}}m</td>
+            <td class="show-imp">{{spec.diameter.imp}}ft</td>
+        </tr>
+        <tr>
+            <td>Chamber Pressure</td>
+            <td>{{spec.chamber_pres.bar}}bar / {{spec.chamber_pres.psi}}psi / {{spec.chamber_pres.MPa}}MPa</td>
+        </tr>
+    </table>
 </div>

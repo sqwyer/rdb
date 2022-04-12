@@ -1,6 +1,30 @@
 let path = window.location.pathname.split('/');
 path.splice(0,2);
 
+
+// cred: https://stackoverflow.com/questions/6491463/accessing-nested-javascript-objects-and-arrays-by-string-path
+// function byString(o, s) {
+//     s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+//     s = s.replace(/^\./, '');           // strip a leading dot
+//     var a = s.split('.');
+//     for (var i = 0, n = a.length; i < n; ++i) {
+//         var k = a[i];
+//         if (k in o) {
+//             o = o[k];
+//         } else {
+//             return;
+//         }
+//     }
+//     return o;
+// }
+
+function resolve(path, obj=self, separator='.') {
+    var properties = Array.isArray(path) ? path : path.split(separator)
+    return properties.reduce((prev, curr) => prev && prev[curr], obj)
+}
+
+// end cred
+
 function imports(text) {
     let lines = text.split('\n');
     if(lines[0].includes('<!--') && !lines[0].includes('-->')) {
@@ -8,7 +32,7 @@ function imports(text) {
         for(let i = 0; i < lines.length; i++) {
             if(lines[i].includes('-->')) break;
             let words = lines[i].split(' ');
-            if(words[0].toUpperCase() == '#IMPORTS' && words[2].toLowerCase() != 'x') {
+            if(words[0].toUpperCase() === '#IMPORTS' && words[2].toLowerCase().trim() != 'x') {
                 if(words[1].toUpperCase() == 'SCRIPT') {
                     let link = document.createElement('script');
                     link.src = `${words[2]}`;
@@ -38,8 +62,10 @@ async function template(file, opts, next){
                 function(match){
                     match = match.replace('{{', '');
                     match = match.replace('}}', '');
-                    console.log(match);
-                    return opts[match]
+                    console.log(match, opts, resolve(match, opts));
+                    // console.log(match);
+                    // return byString(opts, match);
+                    return resolve(match, opts);
                 });
             next(newContent);
         }
@@ -54,10 +80,10 @@ async function template(file, opts, next){
                     document.getElementById('root').innerHTML = content;
                 })
             }).catch(e => {
-                console.error('errorrr: ', e);
-                console.log(path);
+                console.error('Error: ', e);
+                // console.log(path);
             })
     } else {
-        console.error('L bad... not engines: ', path);
+        console.error('No engine at path: ', path);
     }
 })();

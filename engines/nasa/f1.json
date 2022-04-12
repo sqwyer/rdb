@@ -1,26 +1,39 @@
 {
-  "name": "F1",
-  "agency": "NASA",
-  "manufac": "Rocketdyne",
-  "developed": "1950",
-  "flown": [],
-  "fuel": "LOX/RP1",
-  "cycle": "Closed Gas-generator",
-  "dry_weight": {
-    "imp": 18500,
-    "metric": 8400
+  "spec": {
+    "name": "Rocketdyne F-1",
+    "agency": ["NASA"],
+    "manufac": ["Rocketdyne", "NASA"],
+    "developed": {
+      "start": 1950
+    },
+    "flown": [],
+    "fuel": {
+      "o": "LOX",
+      "f": "RP1"
+    },
+    "cycle": "Closed Gas-generator",
+    "dry_weight": {
+      "imp": 18500,
+      "metric": 8400
+    },
+    "chamber_pres": {
+      "bar": 70,
+      "psi": 1050,
+      "MPa": 7
+    },
+    "diameter": {
+      "imp": 12.2,
+      "metric": 3.7
+    },
+    "mix": {
+      "general": 2.27,
+      "percent": {
+        "o": "69",
+        "f": "31"
+      }
+    }
   },
-  "chamber_pres": {
-    "bar": 70,
-    "psi": 1050,
-    "MPa": 7
-  },
-  "diameter": {
-    "imp": 12.2,
-    "metric": 3.7
-  },
-  "mix": {
-    "general": 2.27,
-    "percent": "69:31"
+  "info": {
+    "desc": "The Rocketdyne F-1 engine was an engine developed for NASA's Apollo program. Five of these engines were used on the first stage of the Saturn V heavy launch vehicle. The F-1 engine is widely regarded today as one of the most powerful rocket engines ever created."
   }
 }
