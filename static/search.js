@@ -8,16 +8,14 @@ function imports(text) {
         for(let i = 0; i < lines.length; i++) {
             if(lines[i].includes('-->')) break;
             let words = lines[i].split(' ');
-            console.log(lines[i])
             if(words[0].toUpperCase() == '#IMPORTS' && words[2].toLowerCase() != 'x') {
-                // console.log('check 1')
                 if(words[1].toUpperCase() == 'SCRIPT') {
-                    // console.log('check 2.1')
-                    document.head.innerHTML+=`<link rel="stylesheet" href="${words[2]}" type="text/css">`
+                    let link = document.createElement('script');
+                    link.src = `${words[2]}`;
+                    document.querySelector('body').appendChild(link);
                 }
                 else if(words[1].toUpperCase() == 'STYLE') {
-                    // console.log('check 2.2')
-                    document.head.innerHTML+=`<script src="${words[2]}" defer></script>`
+                    document.querySelector('head').innerHTML+=`<link rel="stylesheet" href="${words[2]}" type="text/css">`
                 }
             }
         }
